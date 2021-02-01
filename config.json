@@ -1,0 +1,20 @@
+{
+    "filepath":{"dataset":"/home/a_imagawa/Downloads/SUN397",
+                "partitions":"/home/a_imagawa/Downloads/Partitions",
+                "output":"/home/a_imagawa/Documents/personal/data"},
+    "data":{"epochs":512,
+            "batch_size":512,
+            "img_size":256,
+            "exclude_list":["/home/a_imagawa/Downloads/SUN397/a/assembly_line/sun_ajckcfldgdrdjogj.jpg",
+                            "/home/a_imagawa/Downloads/SUN397/a/atrium/public/sun_blgesddskghneaan.jpg",
+                            "/home/a_imagawa/Downloads/SUN397/a/atrium/public/sun_bsxsmqmkhxxlkoub.jpg",
+                            "/home/a_imagawa/Downloads/SUN397/a/assembly_line/sun_ajckcfldgdrdjogj.jpg",
+                            "/home/a_imagawa/Downloads/SUN397/a/assembly_line/sun_ajckcfldgdrdjogj.jpg",
+                            "/home/a_imagawa/Downloads/SUN397/a/atrium/public/sun_blgesddskghneaan.jpg",
+                            "/home/a_imagawa/Downloads/SUN397/a/atrium/public/sun_blgesddskghneaan.jpg",
+                            "/home/a_imagawa/Downloads/SUN397/a/atrium/public/sun_bsxsmqmkhxxlkoub.jpg",
+                            "/home/a_imagawa/Downloads/SUN397/a/atrium/public/sun_bsxsmqmkhxxlkoub.jpg",
+                            "/home/a_imagawa/Downloads/SUN397/a/assembly_line/sun_ajckcfldgdrdjogj.jpg",
+                            "/home/a_imagawa/Downloads/SUN397/a/atrium/public/sun_blgesddskghneaan.jpg",
+                            "/home/a_imagawa/Downloads/SUN397/a/atrium/public/sun_bsxsmqmkhxxlkoub.jpg"]}
+}
