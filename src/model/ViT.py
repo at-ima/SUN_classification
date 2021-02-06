@@ -119,7 +119,7 @@ class VisionTransformer(tf.keras.Model):
                 LayerNormalization(epsilon=1e-6),
                 Dense(mlp_dim, activation=tfa.activations.gelu),
                 Dropout(dropout),
-                Dense(num_classes, activation='softmax'),
+                Dense(num_classes, activation='softmax', dtype='float32'),
             ]
         )
 

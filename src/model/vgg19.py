@@ -55,7 +55,6 @@ def VGG19(classes, classifier_activation='softmax', img_size=256, data_format='c
     x = layers.Dropout(0.5, name='dropout1')(x)
     x = layers.Dense(512, activation='relu', name='fc2')(x)
     x = layers.Dropout(0.5, name='dropout2')(x)
-    x = layers.Dense(classes, activation=classifier_activation,
-                     name='predictions')(x)
+    x = layers.Dense(classes, activation=classifier_activation, dtype='float32', name='predictions')(x)
     model = training.Model(img_input, x, name='vgg19')
     return model
