@@ -7,7 +7,7 @@ class aug_process(tf.keras.Model):
         self.rand_trans = preprocessing.RandomTranslation((-0.2, 0.3), (-0.2, 0.3))
         self.rand_rot = preprocessing.RandomRotation((-1, 1))
         self.rand_crop = preprocessing.RandomCrop(img_size, img_size)
-        self.rand_cont = preprocessing.RandomContrast(0.2, 0.3)
+        self.rand_cont = preprocessing.RandomContrast(0.5, 0.3)
         
     def call(self, image):
         image = self.rand_trans(image)
