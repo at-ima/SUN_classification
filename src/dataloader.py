@@ -14,12 +14,15 @@ class dataloader():
         self.batch_size = batch_size
         self.img_size = img_size
         self.is_aug = is_aug
+        
     def aug(self, image):
         image = tfa.image.translate_xy(image, tf.random.uniform([2], minval=-0.2, maxval=0.3), 0)
         image = tfa.image.rotate(image, tf.random.uniform([1], minval=-3.14, maxval=3.14),)
         
-        image = tf.image.random_crop(image, [self.img_size, self.img_size, 3], seed=int(dt.datetime.now().timestamp()))
-        image = tf.image.random_contrast(image, 0.5, 1.3, seed=int(dt.datetime.now().timestamp()))
+        image = tf.image.random_crop(image, [self.img_size, self.img_size, 3], 
+                                     seed=int(dt.datetime.now().timestamp()))
+        image = tf.image.random_contrast(image, 0.5, 1.3,
+                                         seed=int(dt.datetime.now().timestamp()))
         return image
     
     def preprocess(self, image):
@@ -31,7 +34,7 @@ class dataloader():
         image = tf.cast(image, tf.float16)
         image = rescale(image)
         if self.is_aug and self.is_train:
-            image = aug(image)
+            image = self.aug(image)
         return image
 
     def load_img(self, path):
