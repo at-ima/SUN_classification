@@ -51,8 +51,6 @@ class dataloader():
         self.is_train = is_train
         path_ds = tf.data.Dataset.from_tensor_slices(image_path_list)
         label_ds = tf.data.Dataset.from_tensor_slices(label_list)
-        
-        image_ds = path_ds.map(self.load_img, num_parallel_calls=AUTOTUNE)
         image_ds = path_ds.map(self.load_img, num_parallel_calls=AUTOTUNE)
             
         ds = tf.data.Dataset.zip((image_ds, label_ds))
